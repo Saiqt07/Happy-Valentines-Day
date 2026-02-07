@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special Valentine's Day proposal">
+    <title>Happy Valentine's Day! 💕</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="bg music/bg music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-toggle" aria-label="Toggle music">
+        <span class="music-icon">🎵</span>
+    </button>
+
+    <!-- Main Container -->
+    <div class="main-wrapper">
+        <div class="proposal-container">
+            <!-- Initial Card - Happy Valentine's Day -->
+            <div class="proposal-card" id="proposalCard">
+                <!-- Cute Cat GIF -->
+                <div class="cat-container">
+                    <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Cute cat with hearts"
+                        class="cat-gif" id="catGif">
+                </div>
+
+                <!-- Question -->
+                <h1 class="question-text">Happy Valentine's Day! 💕</h1>
+
+                <!-- Decorative Hearts -->
+                <div class="decorative-hearts">
+                    <span class="heart">💕</span>
+                    <span class="heart">💖</span>
+                    <span class="heart">💗</span>
+                </div>
+
+                <!-- Clickable Heart -->
+                <div class="heart-button-container">
+                    <button class="clickable-heart" id="clickableHeart" aria-label="Click to see memories">
+                        ❤️
+                    </button>
+                    <p class="heart-instruction">Click the heart to see our memories</p>
+                </div>
+            </div>
+
+            <!-- Memory Gallery Card (Hidden Initially) -->
+            <div class="memory-card" id="memoryCard">
+                <h2 class="memory-title">Our Memories Together 💕</h2>
+
+                <!-- Photos Section -->
+                <div class="media-section">
+                    <h3 class="section-title">Our Photos 📸</h3>
+                    <div class="gallery-grid photos-grid">
+                        <a href="pictures/pic (1).jpeg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (1).jpeg" alt="Memory 1" class="memory-photo">
+                        </a>
+                        <a href="pictures/pic (2).jpeg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (2).jpeg" alt="Memory 2" class="memory-photo">
+                        </a>
+                        <a href="pictures/pic (3).jpeg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (3).jpeg" alt="Memory 3" class="memory-photo">
+                        </a>
+                        <a href="pictures/pic (1).jpg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (1).jpg" alt="Memory 4" class="memory-photo">
+                        </a>
+                        <a href="pictures/pic (2).jpg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (2).jpg" alt="Memory 5" class="memory-photo">
+                        </a>
+                        <a href="pictures/pic (3).jpg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (3).jpg" alt="Memory 6" class="memory-photo">
+                        </a>
+                        <a href="pictures/pic (4).jpg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (4).jpg" alt="Memory 7" class="memory-photo">
+                        </a>
+                        <a href="pictures/pic (5).jpg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (5).jpg" alt="Memory 8" class="memory-photo">
+                        </a>
+                        <a href="pictures/pic (6).jpg" target="pic" class="gallery-item" data-type="image">
+                            <img src="pictures/pic (6).jpg" alt="Memory 9" class="memory-photo">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Videos Section -->
+                <div class="media-section">
+                    <h3 class="section-title">Our Videos 🎥</h3>
+                    <div class="gallery-grid videos-grid">
+                        <a href="videos/vid (1).mp4" target="vid" class="gallery-item video-item" data-type="video">
+                            <video src="videos/vid (1).mp4" class="memory-video"></video>
+                            <div class="video-overlay">
+                                <span class="play-icon">▶️</span>
+                            </div>
+                        </a>
+                        <a href="videos/vid (2).mp4" target="vid" class="gallery-item video-item" data-type="video">
+                            <video src="videos/vid (2).mp4" class="memory-video"></video>
+                            <div class="video-overlay">
+                                <span class="play-icon">▶️</span>
+                            </div>
+                        </a>
+                        <a href="videos/vid (3).mp4" target="vid" class="gallery-item video-item" data-type="video">
+                            <video src="videos/vid (3).mp4" class="memory-video"></video>
+                            <div class="video-overlay">
+                                <span class="play-icon">▶️</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="memory-question">
+                    <p class="question-subtitle">Would you like to read a special letter? 💌</p>
+                    <button class="btn-read-letter" id="readLetterBtn">
+                        Yes, I'd love to! 💖
+                    </button>
+                </div>
+            </div>
+
+            <!-- Love Letter (Hidden Initially) -->
+            <div class="love-letter" id="loveLetter">
+                <div class="letter-header">
+                    <h2 class="letter-title">To My Eclipse 🌙☀️</h2>
+                    <div class="letter-decoration">
+                        <span>✨</span>
+                        <span>💕</span>
+                        <span>✨</span>
+                    </div>
+                </div>
+
+                <!-- Falling Hearts Container (Inside Letter) -->
+                <div class="hearts-container" id="heartsContainer"></div>
+
+                <div class="letter-content">
+                    <p class="letter-paragraph">
+                        <strong>Lee Lyth</strong>, habang iniisip ko yung pag-alis mo pa America, naisip ko na para kang
+                        isang <strong>Eclipse</strong>.
+                        Isang rare at breathtaking na moment na minsan lang dumating, kaya sobrang pinapahalagahan ko
+                        'to.
+                    </p>
+
+
+                    <p class="letter-paragraph">
+                        Gusto kong malaman mo na <strong>I genuinely like you</strong> hindi lang ito basta pakiramdam,
+                        kundi something
+                        real at malalim. Alam ko na sobrang dami mong plates na pilit na binabalanse ngayon—yung
+                        burnout, yung preparation mo sa pag-alis, at yung personal space mo.
+                    </p>
+
+                    <p class="letter-paragraph">
+                        Kaya gusto ko ring linawin na hindi ako dagdag sa mga isasabit mo sa isip mo. Hindi ako
+                        obligasyon na kailangang i-entertain o laging replyan. Consider me as your <strong>'safe
+                            space'</strong>—yung
+                        taong nandito lang para bawasan ang bigat, hindi para dagdagan.
+                    </p>
+
+                    <p class="letter-paragraph">
+                        Sabi ko nga, eclipses require patience and the right alignment. Kaya kung kailangan mo ng isang
+                        taon, o kahit gaano pa katagal habang nandoon ka na sa America, <strong>I am willing to
+                            wait</strong>. <strong>You are
+                            worth every second of the wait</strong>. Parang buwan lang ako na maghihintay sa orbit mo,
+                        constant at
+                        hindi nagmamadali, hanggang sa mag-align na ulit ang lahat sa atin.
+                    </p>
+
+                    <p class="letter-paragraph signature">
+                        <strong>You are my sun, my moon, my eclipse.</strong><br>
+                        Take your time to handle everything. Nandito lang ako, palagi.
+                    </p>
+
+                    <div class="letter-footer">
+                        <p class="forever-text">Forever yours,</p>
+                        <p class="sender-name">Your Lucy Pearl</p>
+                    </div>
+
+                    <!-- Additional Cat GIF in Letter -->
+                    <div class="letter-cat-container">
+                        <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="Happy cat"
+                            class="letter-cat-gif">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
